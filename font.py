@@ -22,7 +22,7 @@ tutorial_indietro_it="Torna indietro  ⇦"
 def startCommand(update: Update, context: CallbackContext) -> None:
     diz(update, context)
     aggiungi_dizionario(update, context, dizionario)
-    buttons = [[KeyboardButton(italiano)], [KeyboardButton(inglese)]]
+    buttons = [[KeyboardButton(italiano)],]
     testo = "Benvenuto nel nostro bot\nScegli la lingua 🇮🇹"
     context.bot.send_message(chat_id=update.effective_chat.id, text=testo, reply_markup=ReplyKeyboardMarkup(buttons))
     testo = "Welcome to our bot\nChose the language 🇬🇧 / 🇺🇸"

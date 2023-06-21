@@ -1,21 +1,3 @@
-#
-#
-# File: fontanelle
-# Authors: Talha Imran, Kasun Rajapaksha, Gianmario Fiorini, Shady Khalaile, Cristian Motoc
-# Date: 27/06/2022
-# Description: ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-##Il nostro bot sarà la salvezza per quelle persone o animali che stanno morendo di sete,
-##questo bot ti consentirà di vedere una mappa di tutte le fontanelle, oppure dirti la posizione della fontana più vicina,
-##con la quale poi potresti, volendo, avere indicazioni tramite google maps.
-##Tutto questo sia in italiano che in Inglese!
-##Buona bevuta sostenibile! :)
-##////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-##Our bot is going be the saving for those people of animals that are dying of thirst,
-##this bot will allow you to see a map of all public fountain, or telling you the position of the nearest fountain to you,
-##and use google maps to get to it.
-##All this both in Italian and in english!
-##Have a good drink! :)
-##////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 from telegram import *
 from telegram.ext import *
@@ -27,26 +9,13 @@ from math import radians, cos, sin, asin, sqrt
 #italiano
 italiano = "Italiano  🇮🇹"
 fontanella_vicina_it = "Indicazioni per la fontanella più vicina  ➤"
-fontanelle_Verona_it = "Mappa delle fontanelle di Verona  🗺"
+fontanelle_Verona_it = "Mappa delle fontanelle dell'ovest veronese  🗺"
 cambia_lingua_it="Cambia lingua / Change language\n⇦ 🇮🇹 / 🇬🇧 / 🇺🇸"
 tutorial_it="Come inviare la posizione 🔧"
 indietro_it="Torna indietro ⇦"
 tutorial_ios_it=" iOS "
 tutorial_android_it="🤖  Android  🤖"
 tutorial_indietro_it="Torna indietro  ⇦"
-quiz_it="Quiz 📝"
-
-#inglese
-inglese = "English 🇬🇧 / 🇺🇸"
-fontanella_vicina_en = "Directions to the nearest drinking fountain ➤"
-fontanelle_Verona_en = "Map of Verona's drinking fountains 🗺"
-cambia_lingua_en="Change language / Cambia lingua\n⇦ 🇮🇹 / 🇬🇧 / 🇺🇸"
-tutorial_en="Tutorial 🔧"
-indietro_en="Go back ⇦"
-tutorial_ios_en="  iOS  "
-tutorial_android_en="🤖 Android 🤖"
-tutorial_indietro_en="Go back  ⇦"
-quiz_en="Quiz  📝"
 
 ####funtions###
 
@@ -195,14 +164,9 @@ def messageHandler(update: Update, context: CallbackContext):
     if presente == True:
         #italiano
         if italiano in update.message.text:
-            buttons = [[KeyboardButton(fontanella_vicina_it)], [KeyboardButton(fontanelle_Verona_it)], [KeyboardButton(quiz_it)], [KeyboardButton(cambia_lingua_it)]]
+            buttons = [[KeyboardButton(fontanella_vicina_it)], [KeyboardButton(fontanelle_Verona_it)],  [KeyboardButton(cambia_lingua_it)]]
             context.bot.send_message(chat_id=user_id, text="Benvenuto!!!\nQuesto bot ti permette di trovare la fontanella più vicina a te.", reply_markup=ReplyKeyboardMarkup(buttons))
 
-        if quiz_it in update.message.text:
-            update.message.reply_text(
-            'Clicca qua ⇩',
-            reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton(text='Quiz', url='https://take.panquiz.com/9767-6114-0080')],]))
 
         if fontanella_vicina_it in update.message.text:
             context.bot_data["lingua"] = "it"
@@ -218,7 +182,7 @@ def messageHandler(update: Update, context: CallbackContext):
             diz(update, context)
             aggiungi_dizionario(update, context, dizionario)
             testo = "Scegli un'opzione"
-            buttons = [[KeyboardButton(fontanella_vicina_it)], [KeyboardButton(fontanelle_Verona_it)], [KeyboardButton(quiz_it)], [KeyboardButton(cambia_lingua_it)]]
+            buttons = [[KeyboardButton(fontanella_vicina_it)], [KeyboardButton(fontanelle_Verona_it)], [KeyboardButton(cambia_lingua_it)]]
             context.bot.send_message(chat_id=user_id, text=testo, reply_markup=ReplyKeyboardMarkup(buttons))
 
         if tutorial_it in update.message.text:
@@ -236,7 +200,7 @@ def messageHandler(update: Update, context: CallbackContext):
         
         if tutorial_indietro_it in update.message.text:
             testo = "Scegli un'opzione"
-            buttons = [[KeyboardButton(fontanella_vicina_it)], [KeyboardButton(fontanelle_Verona_it)], [KeyboardButton(quiz_it)], [KeyboardButton(cambia_lingua_it)]]
+            buttons = [[KeyboardButton(fontanella_vicina_it)], [KeyboardButton(fontanelle_Verona_it)], [KeyboardButton(cambia_lingua_it)]]
             context.bot.send_message(chat_id=user_id, text=testo, reply_markup=ReplyKeyboardMarkup(buttons))
         
         if fontanelle_Verona_it in update.message.text:
@@ -250,63 +214,7 @@ def messageHandler(update: Update, context: CallbackContext):
             testo = "Scegli la lingua"
             context.bot.send_message(chat_id=user_id, text=testo, reply_markup=ReplyKeyboardMarkup(buttons))
         
-        #Inglese
-        if inglese in update.message.text:
-            buttons = [[KeyboardButton(fontanella_vicina_en)], [KeyboardButton(fontanelle_Verona_en)],[KeyboardButton(quiz_en)],[KeyboardButton(cambia_lingua_en)]]
-            context.bot.send_message(chat_id=user_id, text="Welcome !!! \nThis bot allows you to find the nearest drinking fountain.", reply_markup=ReplyKeyboardMarkup(buttons))
-
-        if quiz_en in update.message.text:
-            update.message.reply_text(
-            'Click here ⇩',
-            reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton(text='Quiz', url='https://take.panquiz.com/9309-2766-0228')],]))
-
-        if fontanella_vicina_en in update.message.text:
-            context.bot_data["lingua"] = "en"
-            diz(update, context)
-            aggiungi_dizionario(update, context, dizionario)
-            testo = "Send your location 📍 or watch the tutorial"
-            buttons = [[KeyboardButton(tutorial_en)], [KeyboardButton(indietro_en)]]
-            context.bot.send_message(chat_id=user_id, text=testo, reply_markup=ReplyKeyboardMarkup(buttons))
-            dispatcher.add_handler(MessageHandler(Filters.location, fontanella_vicina))
-
-        if indietro_en in update.message.text:
-            context.bot_data["lingua"] = ""
-            diz(update, context)
-            aggiungi_dizionario(update, context, dizionario)
-            testo = "Choose an option"
-            buttons = [[KeyboardButton(fontanella_vicina_en)], [KeyboardButton(fontanelle_Verona_en)],[KeyboardButton(quiz_en)],[KeyboardButton(cambia_lingua_en)]]
-            context.bot.send_message(chat_id=user_id, text=testo, reply_markup=ReplyKeyboardMarkup(buttons))
-
-        if tutorial_en in update.message.text:
-            testo = "1 -> click on '📎'\n2 -> click on 'position'\n3 -> click on 'send my current position'"
-            buttons = [[KeyboardButton(tutorial_ios_en)], [KeyboardButton(tutorial_android_en)], [KeyboardButton(tutorial_indietro_en)]]
-            context.bot.send_message(chat_id=user_id, text=testo, reply_markup=ReplyKeyboardMarkup(buttons))
-            testo = "Or choose your operating system to download a tutorial with pictures"
-            context.bot.send_message(chat_id=user_id, text=testo)
-        
-        if tutorial_ios_en in update.message.text:
-            send_tutorial_ios_en(update, context)
-        
-        if tutorial_android_en in update.message.text:
-            send_tutorial_android_en(update, context)
-        
-        if tutorial_indietro_en in update.message.text:
-            testo = "Choose an option"
-            buttons = [[KeyboardButton(fontanella_vicina_en)], [KeyboardButton(fontanelle_Verona_en)],[KeyboardButton(quiz_en)],[KeyboardButton(cambia_lingua_en)]]
-            context.bot.send_message(chat_id=user_id, text=testo, reply_markup=ReplyKeyboardMarkup(buttons))
-        
-        if fontanelle_Verona_en in update.message.text:
-            mappa_en(update, context)
-        
-        if cambia_lingua_en in update.message.text:
-            context.bot_data["lingua"] = ""
-            diz(update, context)
-            aggiungi_dizionario(update, context, dizionario)
-            buttons = [[KeyboardButton(italiano)], [KeyboardButton(inglese)]]
-            testo = "Choose language!"
-            context.bot.send_message(chat_id=user_id, text=testo, reply_markup=ReplyKeyboardMarkup(buttons))
-
+ 
 #main#  
 def main():
     global dispatcher

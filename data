@@ -2,23 +2,6 @@ Identificativo;Indirizzo;Tipologia;Note;Lat;Long
 Piovezzano;Via Due Porte;Rubinetto; 45.50501068672474; 10.795841150568764
 Ciclapista;Ciclopista dell'Adige e del Sole;Pulsante; 45.50896395450404; 10.797212943422503
 Pastrengo;Piazza Carlo Alberto;Rubinetto; 45.492237353801706; 10.800003639455449
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-Identificativo;Indirizzo;Tipologia;Note;Lat;Long
 Giardino;via M. Pastello;Pulsante;Ospedaletto;45.50511896899591;10.838774657373648
 parco giochi ed aiuola;via Busa;Pulsante;Ospedaletto;45.50589940154476;10.836770847762761
 Parco via Don Morandin;via Don Morandin;Pulsante;LOCALITA’ SANTA LUCIA;45.49931208015199;10.81931872031678
@@ -56,41 +39,7 @@ Parco giochi Via Falcone;Via Falcone;Pulsante;LOCALITA’ CAPOLUOGO EST;45.47999
 Area verde via Martiri della Libertà;via Martiri della Libertà;Pulsante;LOCALITA’ CAPOLUOGO EST;45.48389789055445;10.877663725245034
 Parco giochi via Butturini;via Butturini;Pulsante;LOCALITA’ CAPOLUOGO SUD;45.48232941092802;10.865106313143473
 Area Verde via Butturini;via Butturini;Pulsante;LOCALITA’ CAPOLUOGO SUD;45.483116363628106;10.864254793537075
-;;;;
-;;;;
-;;;;
-;;;;
-;;;;
-;;;;
-;;;;
-;;;;
-;;;;
-;;;;
-;;;;
-;;;;
-;;;;
-;;;;
-Identificativo;Indirizzo;Tipologia;Note;Lat;Long
 Fontana giardini Piazza della Repubblica;P.zza della Repubblica, Sommacampagna;;45.408230313065154;10.84072021040442
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-Identificativo;Indirizzo;Tipologia;Note;Lat;Long
 Lugagnano.01;Via Don G. Fracasso;Pulsante;;45.43110450968179;10.888298852051626;
 Lugagnano.02;Via Festara;Pulsante;;45.43543989071521;10.868509395547415;
 Lugagnano.03;Parco Tortella - Via Adda;Pulsante;;45.43368818364862;10.872271534210308;
@@ -141,7 +90,6 @@ TEODORICO;VICOLO TEODORICO, SALIONZE;ND;PARCO GIOCHI;45.406679651777246;10.72581
 NIKOLAJEWKA;PIAZZA NIKOLAJEWKA, SALIONZE;ND;PARCO GIOCHI;45.40445479563723;10.723060451646642;
 BENACO;VIA BENACO, SALIONZE;Rubinetto;PARCO GIOCHI;45.4033028722545;10.725466990876825;
 DEL BUE;VICOLO ADIGE DEL BUE, SALIONZE;Rubinetto;PARCO GIOCHI;45.35068011482461;10.740091863759137;
-Identificativo;Indirizzo;Tipologia;Note;Lat;Long
 VITTORIO EMANUELE;VIA VITTORIO EMANUELE SECONDO, VALEGGIO SUL MINCIO;Rubinetto;PARCO;45.358589112311925;10.738719620635823;
 BELLUNO;VICOLO BELLUNO, VALEGIGO SUL MINCIO;Rubinetto;PARCO GIOCHI;45.35928968615734;10.740133569855663;
 ICHENHAUSEN (Fontana);VIA GORIZIA, VALEGGIO SUL MINCIO;Flusso continuo;PARCO;45.35677575605049;10.73788413855253;
@@ -166,7 +114,6 @@ TEODORICO;VICOLO TEODORICO, SALIONZE;ND;PARCO GIOCHI;45.406679651777246;10.72581
 NIKOLAJEWKA;PIAZZA NIKOLAJEWKA, SALIONZE;ND;PARCO GIOCHI;45.40445479563723;10.723060451646642;
 BENACO;VIA BENACO, SALIONZE;Rubinetto;PARCO GIOCHI;45.4033028722545;10.725466990876825;
 DEL BUE;VICOLO ADIGE DEL BUE, SALIONZE;Rubinetto;PARCO GIOCHI;45.35068011482461;10.740091863759137;
-Identificativo;Indirizzo;Tipologia;Note;Lat;Long
 Parco Camalavicina;Via Camalavicina;Pulsante;;45.4171294729841;10.723390948582527;
 Parco Attila;Via Attila;Pulsante;;45.41744207097546;10.725817862670178;
 Parco Risorgimento;Via Risorgimento;Pulsante;;45.40839942469932;10.75023156290057;
@@ -183,6 +130,4 @@ Via Cavour, Via Trento;Via Cavour Via Trento;Flusso continuo;;45.44356390048229;
 Piazza Cavalcaselle ;Via  Settembre;Pulsante;;;;;
 Parco Martin Luther King;Via Martin Luther King;Pulsante;;45.44214706637133;10.756050096387227;
 Parco Monte Alto;Via Degli Studi;Pulsante;;45.44366530680311;10.763569012327116;
-;;;
-;;;
-;;;
+
